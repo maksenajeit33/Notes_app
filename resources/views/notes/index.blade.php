@@ -2,7 +2,6 @@
 
 @section('content')
 
-@if (count($notes))
 <div class="container">
     <div class="jumbotron container">
         <h1>All Notes!</h1>
@@ -15,6 +14,8 @@
         {{$message}}
     </div>
     @endif
+
+    @if (count($notes))
 
     <table class="table">
         <thead class="thead-dark">
@@ -47,9 +48,9 @@
         </tbody>
     </table>
 
-    {{-- PAGINATION --}}
-    @if ($notes->hasPages())
-    <nav aria-label="Page navigation example">
+        {{-- PAGINATION --}}
+        @if ($notes->hasPages())
+        <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
             @if ($notes->onFirstPage())
                 <li class="page-item disabled">
@@ -68,14 +69,14 @@
                 </li>
             @endif
         </ul>
-    </nav>
-    @endif
+        </nav>
+        @endif
 
+    @else
+    <div class="alert alert-warning container" role="alert">
+        There is no note!
+    </div>
+    @endif
 </div>
-@else
-<div class="alert alert-warning container" role="alert">
-    There is no note!
-</div>
-@endif
 
 @endsection
