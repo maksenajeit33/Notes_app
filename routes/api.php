@@ -27,5 +27,6 @@ Route::prefix('user')->namespace('API')->group(function () {
 
     Route::middleware('auth:api')->group(function () {
         Route::post('logout', [AuthController::class, 'logout']);
+        Route::resource('notes', NoteController::class);
     });
 });
