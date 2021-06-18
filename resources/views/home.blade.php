@@ -16,6 +16,11 @@
 
                     {{ __('You are logged in!') }}
                 </div>
+                <hr>
+                <div class="card-body">
+                    <a href="{{route('notes.index')}}" class="btn btn-primary">All Notes</a>
+                    <a href="{{route('notes.create')}}" class="btn btn-success">Create Note</a>
+                </div>
             </div>
         </div>
     </div>
