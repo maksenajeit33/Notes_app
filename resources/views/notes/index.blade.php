@@ -73,7 +73,7 @@
 
 </div>
 @else
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning container" role="alert">
     There is no note!
 </div>
 @endif
