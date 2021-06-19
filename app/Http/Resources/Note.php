@@ -17,9 +17,10 @@ class Note extends JsonResource
         // return parent::toArray($request);
 
         return [
-            'title' => $this->title,
-            'content' => $this->content,
-            'user' => $this->user->name,
+            'id'         => $this->id,
+            'title'      => $this->title,
+            'content'    => $this->content,
+            'user'       => $this->user->name,
             'created_at' => $this->created_at->format('d/m/Y'),
             'updated_at' => $this->updated_at->format('d/m/Y')
         ];
