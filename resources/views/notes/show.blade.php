@@ -10,8 +10,8 @@
                     <h5 class="card-title">{{$note->title}}</h5>
                     <p class="card-text">{{$note->content}}</p>
                     <blockquote class="blockquote mb-0">
-                        <footer class="blockquote-footer">{{$note->created_at->diffForHumans()}}</footer>
-                        <footer class="blockquote-footer">{{$note->updated_at->diffForHumans()}}</footer>
+                        <footer class="blockquote-footer">Created at • {{$note->created_at->diffForHumans()}}</footer>
+                        <footer class="blockquote-footer">Updated at • {{$note->updated_at->diffForHumans()}}</footer>
                     </blockquote>
                 </div>
                 <hr>
